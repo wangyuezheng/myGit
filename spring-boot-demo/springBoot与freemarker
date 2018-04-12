@@ -1,0 +1,17 @@
+1、先导入freemarker的依赖
+	找依赖的方法，按住Ctrl键点击<groupId>org.springframework.boot</groupId>，
+	这样会打开springBoot中所有依赖 然后搜索free或者freemarker全名，就能定位到。复制出来放进pom文件中。
+2、在application.properties配置文件中添加freemarker 静态资源配置
+	设定ftl文件路劲  
+	spring.freemarker.template-loader-path=classpath:/templates
+	关闭缓存，及时刷新，生成环境需要 修改为 
+	truespring.freemarker.cache=false
+	spring.freemarker.charset=UTF-8
+	spring.freemarker.check-template-location=true
+	spring.freemarker.content-type=text/html
+	spring.freemarker.expose-request-attributes=true
+	spring.freemarker.expose-session-attributes=true
+	spring.freemarker.request-context-attribute=request
+	spring.freemarker.suffix=.ftl
+3、在resource文件下创建templates文件夹，然后在创建freemarker目录。里面放置freemarker的ftl静态资源。
+4、启动服务即可。
