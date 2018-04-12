@@ -1,5 +1,6 @@
-
-
+#╨Жбтнд╪Ч 
+.gitignore
+*.bak
 # Files for the ART/Dalvik VM
 *.dex
 
